@@ -49,7 +49,7 @@ test.describe('Product Page Validation', () => {
         await expect(finalPageElements.backHomeButton).toBeVisible();
     })
 
-    test('Validate Success Image Visibility', async ({ page }) => {
+    test.only('Validate Success Image Visibility', async ({ page }) => {
         const isImageVisible = await finalPage.isSuccessImageVisible();
         expect(isImageVisible).toBe("Thank you for your order!");
     })

@@ -17,8 +17,8 @@ export class FinalPage {
     }
 
     async isSuccessImageVisible() {
-        const text = await this.page.locator(finalPageLocators.successImage).innerText();
-        return text?.trim();
+        const text = await this.page.locator(finalPageLocators.successMessage).innerText();
+        return (await text).trim();
     }
 
     async clickOnBackHomeButton() {
