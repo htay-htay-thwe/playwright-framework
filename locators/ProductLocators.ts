@@ -1,0 +1,17 @@
+export const ProductLocators = {
+    settingButton: '#react-burger-menu-btn',
+    logoutLink: '#logout_sidebar_link',
+    aboutLink: '#about_sidebar_link',
+    bookDemo: 'role=link[name="Book a Demo"]',
+    tryItFree: 'button:has-text("Try it free")',
+    productNames: '.inventory_item_name',
+    productDescriptions: '.inventory_item_desc',
+    productPrices: '.inventory_item_price',
+    addToCartButtons: '.btn_small.btn_inventory',
+    filterDropdown: '.product_sort_container',
+    filterNameAZ: 'option[value="az"]',
+    filterNameZA: 'option[value="za"]',
+    filterPriceLowHigh: 'option[value="lohi"]',
+    filterPriceHighLow: 'option[value="hilo"]',
+    cartLink: '.shopping_cart_link',
+}
