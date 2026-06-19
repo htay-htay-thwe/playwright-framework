@@ -64,17 +64,17 @@ test.describe('Product Page Validation', () => {
     })
 
 
-    test('Validate Remove Product from Cart', async ({ page }) => {
+    test.only('Validate Remove Product from Cart', async ({ page }) => {
         const allProducts = await productPage.getAllProductDetails();
         await productPage.addProductToCart();
         await productPage.clickOnCart();
 
         const initialCartProducts = await cartPage.getCartProducts();
-        await expect(initialCartProducts).toBeGreaterThan(0);
+        await expect(initialCartProducts).toHaveLength(1);
         await cartPage.removeFirstProduct();
 
         const updatedCartProducts = await cartPage.getCartProducts();
-        await expect(updatedCartProducts).toBe(initialCartProducts.length - 1);
+        await expect(updatedCartProducts).toHaveLength(0);
     });
 
 })
