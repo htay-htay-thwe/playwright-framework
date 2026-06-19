@@ -64,7 +64,7 @@ test.describe('Product Page Validation', () => {
     })
 
 
-    test.only('Validate Remove Product from Cart', async ({ page }) => {
+    test('Validate Remove Product from Cart', async ({ page }) => {
         const allProducts = await productPage.getAllProductDetails();
         await productPage.addProductToCart();
         await productPage.clickOnCart();
