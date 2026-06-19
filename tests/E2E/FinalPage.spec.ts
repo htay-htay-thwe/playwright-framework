@@ -55,7 +55,7 @@ test.describe('Product Page Validation', () => {
         expect(isImageVisible).toBe("Thank you for your order!");
     })
 
-    test.only('Validate Back Home Button Functionality', async ({ page }) => {
+    test('Validate Back Home Button Functionality', async ({ page }) => {
         await finalPage.clickOnBackHomeButton();
         await expect(page).toHaveURL('https://www.saucedemo.com/inventory.html');
     })

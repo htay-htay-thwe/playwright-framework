@@ -52,7 +52,7 @@ test.describe('Product Page Validation', () => {
     })
 
 
-    test.only('Validate Error Message for Empty Form Submission', async ({ page }) => {
+    test('Validate Error Message for Empty Form Submission', async ({ page }) => {
         await cartPage.clickCheckoutButton();
         await checkoutPage.clickContinue();
         const errorMessage = await checkoutPage.getErrorMessage();
